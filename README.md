@@ -17,4 +17,4 @@ This is my course repo for OIM3690. It holds class exercises, weekly logs, and l
 
 ## Weekly Logs
 
-See the [logs/](C:\Users\amolendyk1\Desktop\oim3690\logs) folder.
+See the [logs/](https://github.com/amolendyk1/oim3690/tree/main/logs) folder.
