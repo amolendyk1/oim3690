@@ -23,7 +23,7 @@ What pages or sections do you need?
 - seasonal - shows which flowers and planys work best in which season
 
 What text, images, and links should be included?
-- Text: name of the flower, description of the flower, image of the flower, image of the boquet, decription of the boquet, name of the boqet, links to how to take care of the planys and flowers 
+- Text: name of the flower, description of the flower, image of the flower, image of the boquet, decription of the boquet, name of the boquet, links to how to take care of the planys and flowers 
 
 Do you have a logo, brand colors, or style preferences?
 - simple, clean, easy to read font
@@ -56,10 +56,12 @@ Anything you definitely do NOT want?
 **Client:** Nely Molendyk, she is my mom and an aspiring florist. 
 **Purpose:** [What the website is for, in one sentence]
 **Audience:** [Who will visit and what they need]
-**Key action:** [The #1 thing visitors should do]
+**Key action:** Visitors should sign up for either boquet making classes or purchase flowers and plants.
 
 **Pages/sections needed:**
-- [list them]
+- types of flowers
+- bouquet arrangements
+- description of the flower, image of the flower, image of the boquet, decription of the boquet, name of the boquet, links to how to take care of the planys and flowers 
 
 **Content status:** [What content do you have? What do you still need from the client?]
 
