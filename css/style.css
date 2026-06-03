@@ -71,7 +71,7 @@ a {
 
 a:hover, a:focus {
   color: var(--accent-2);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   outline: none;
 }
 
