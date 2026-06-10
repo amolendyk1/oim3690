@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Allison Molendyk</title>
+    <style>
+      /* Fluid images */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Mobile-first base */
+      body {
+        margin: 0;
+        padding: 12px;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background-color: #f7f7f7;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.25rem;
+        color: #111;
+      }
+
+      p.subtitle {
+        margin: 0 0 1.5rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #222;
+      }
+
+      /* Required asterisk */
+      .required::after {
+        content: " *";
+        color: #d32f2f;
+      }
+
+      input,
+      textarea,
+      select {
+        font: inherit;
+        padding: 0.6rem 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #fff;
+        color: #222;
+        width: 100%;
+        box-sizing: border-box;
+        transition:
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: #0066cc;
+        box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.18);
+        outline: none;
+      }
+
+      /* Group label + input together */
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      /* Validation styling */
+      input:user-invalid,
+      textarea:user-invalid {
+        border-color: #d32f2f;
+      }
+
+      input:user-invalid:focus,
+      textarea:user-invalid:focus {
+        box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.18);
+      }
+
+      .error-msg {
+        font-size: 0.85rem;
+        color: #d32f2f;
+        display: none;
+      }
+
+      input:user-invalid ~ .error-msg,
+      textarea:user-invalid ~ .error-msg {
+        display: block;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button {
+        font: inherit;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        background: #0066cc;
+        color: #fff;
+        cursor: pointer;
+        transition: background 160ms ease;
+        align-self: flex-start;
+      }
+
+      button:hover,
+      button:focus-visible {
+        background: #004d99;
+        outline: none;
+      }
+
+      button:focus-visible {
+        box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.35);
+      }
+
+      /* Tablet and up */
+      @media (min-width: 600px) {
+        body {
+          padding: 20px;
+        }
+
+        .container {
+          padding: 28px 32px;
+        }
+
+        h1 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Get in touch</h1>
+      <p class="subtitle">Fill out the form below and I'll get back to you.</p>
+
+      <form action="https://oim.zhili.dev/echo/view" method="POST">
+        <div class="field">
+          <label class="required" for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="name"
+            aria-describedby="name-error"
+          />
+          <span class="error-msg" id="name-error" role="alert"
+            >Please enter your name.</span
+          >
+        </div>
+
+        <div class="field">
+          <label class="required" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            aria-describedby="email-error"
+          />
+          <span class="error-msg" id="email-error" role="alert"
+            >Please enter a valid email address.</span
+          >
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            placeholder="(555) 123-4567"
+          />
+        </div>
+
+        <div class="field">
+          <label class="required" for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            aria-describedby="message-error"
+          ></textarea>
+          <span class="error-msg" id="message-error" role="alert"
+            >Please enter a message.</span
+          >
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+  </body>
+</html>
