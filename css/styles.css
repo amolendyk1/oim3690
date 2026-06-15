@@ -75,6 +75,15 @@ a:hover, a:focus {
   outline: none;
 }
 
+/* Site header (ID selector) */
+#site-header {
+  background-color: rgba(95,179,255,0.06);
+  padding: 1rem 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  text-align: center;
+  color: var(--text);
+}
+
 /* Forms */
 input, textarea, select {
   font: inherit;
