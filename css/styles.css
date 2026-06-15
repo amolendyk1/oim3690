@@ -9,6 +9,13 @@
   --radius: 8px;
 }
 
+/* Make images scale within their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Base layout & typography */
 html, body {
   height: 100%;

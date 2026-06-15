@@ -1,5 +1,32 @@
-<form action="https://oim.zhili.dev/echo/view" method="POST">
-  <label for="username">Name:</label>
-  <input type="text" id="username" name="username" />
-  <button type="submit">Submit</button>
-</form>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Demo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      form {
+        display: grid;
+        gap: 0.5rem;
+      }
+      label {
+        font-weight: 600;
+      }
+      button {
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Demo</h1>
+      <form action="https://oim.zhili.dev/echo/view" method="POST">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
