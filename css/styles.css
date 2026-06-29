@@ -60,10 +60,34 @@ h1, h2, p, ul, li {
 ============================================================ */
 .top-nav {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
   background-color: var(--brown);
   padding: 16px;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 5px 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .nav-link {
@@ -81,6 +105,29 @@ h1, h2, p, ul, li {
 .nav-link.active {
   background-color: var(--blue-light);
   color: var(--brown);
+}
+
+/* Mobile-first: hide nav links by default */
+.nav-links {
+  display: none;
+}
+
+/* Show nav links when hamburger is clicked */
+.nav-links.active {
+  display: flex;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /* ============================================================

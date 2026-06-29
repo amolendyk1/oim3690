@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <title>Allison | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body class="index-page">
-
+    <script src="js/hamburger-menu.js"></script>
     <!-- SHARED STRIPED HEADER -->
     <header class="striped-header">
       <h1>Welcome</h1>
@@ -16,18 +16,27 @@
 
     <!-- SHARED NAV -->
     <nav class="top-nav">
-      <a class="nav-link active" href="index.html">Home</a>
-      <a class="nav-link" href="hello.html">My First Page</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="about-me.html">About Me</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="hello.html">My First Page</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="about-me.html">About Me</a>
+      </div>
     </nav>
 
     <!-- INDEX CONTENT -->
     <main class="index-wrapper">
-
       <section class="index-panel">
         <h2>About This Site</h2>
-        <p>This website showcases my projects, interests, and coursework at Babson College.</p>
+        <p>
+          This website showcases my projects, interests, and coursework at
+          Babson College.
+        </p>
       </section>
 
       <section class="index-panel">
@@ -35,21 +44,19 @@
         <ul>
           <li>My First HTML Page</li>
           <li>About Me</li>
-          <li>Temperature Converter</li>
-          <li>To‑Do List App</li>
+          <li>About</li>
         </ul>
       </section>
-
     </main>
 
     <!-- SHARED FOOTER -->
     <footer class="footer-polkadots">
       <div class="footer-box">
-        <p>Contact: <a href="mailto:amolendyk1@babson.edu">amolendyk1@babson.edu</a></p>
+        <p>
+          Contact:
+          <a href="mailto:amolendyk1@babson.edu">amolendyk1@babson.edu</a>
+        </p>
       </div>
     </footer>
-
   </body>
 </html>
-
-
