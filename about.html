@@ -1,134 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>About | Allison Molendyk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: #f7f7f7;
-        color: #222;
-      }
 
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: #ffffff;
-        padding: 24px 28px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      }
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-      header {
-        border-bottom: 1px solid #e0e0e0;
-        padding-bottom: 12px;
-        margin-bottom: 20px;
-      }
+<body class="about-page">
 
-      header h1 {
-        margin: 0 0 4px;
-        font-size: 2rem;
-      }
+    <!-- ⭐ STRIPED HEADER -->
+    <header class="striped-header">
+        <h1>About </h1>
+    </header>
 
-      header p {
-        margin: 0;
-        color: #666;
-        font-size: 0.95rem;
-      }
+    <!-- ⭐ FULL-WIDTH NAV BAR (same as Weekly Planner) -->
+    <nav class="top-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about-me.html">About Me</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="hello.html">My First Page</a>
+    </nav>
 
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 12px;
-        display: flex;
-        gap: 16px;
-      }
-
-      nav a {
-        color: #0066cc;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-
-      section {
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        margin: 0 0 8px;
-        font-size: 1.25rem;
-        color: #333;
-      }
-
-      p {
-        margin: 0 0 10px;
-        line-height: 1.6;
-      }
-
-      ul {
-        margin: 6px 0 0;
-        padding-left: 20px;
-      }
-
-      li {
-        margin-bottom: 4px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="hello.html">My first HTML page</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-        <h1>About Me</h1>
-        <p>Allison Molendyk — Babson College Student</p>
-      </header>
-
-      <section aria-labelledby="bio-heading">
-        <h2 id="bio-heading">Bio</h2>
-        <p>
-          I'm Ally, a Babson College student passionate about volleyball,
-          baking, and building things on the web. I love learning how technology
-          works and creating small projects that bring ideas to life.
-        </p>
-      </section>
-
-      <section aria-labelledby="fun-heading">
-        <h2 id="fun-heading">Fun Facts</h2>
-        <ul>
-          <li>I play varsity volleyball at Babson</li>
-          <li>I'm always trying new baking recipes</li>
-          <li>Golf is my newest hobby — and I'm hooked</li>
-          <li>I love exploring new places and cultures</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="goals-heading">
-        <h2 id="goals-heading">Goals</h2>
-        <p>
-          I want to keep growing my web development skills, build projects that
-          solve real problems, and become a more confident problem-solver along
-          the way.
-        </p>
-      </section>
+    <!-- ⭐ SUBTITLE BOX (same spacing as Weekly Planner title) -->
+    <div class="page-title-box">
+        <p class="subtitle-box">Allison Molendyk — Babson College Student</p>
     </div>
-  </body>
+
+    <!-- ⭐ MATCHED PANEL LAYOUT -->
+    <main class="panel-wrapper">
+
+        <section class="panel">
+            <h2>Bio</h2>
+            <p>
+                I'm Ally, a Babson College student passionate about volleyball,
+                baking, and building things on the web. I love learning how technology
+                works and creating small projects that bring ideas to life.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>Fun Facts</h2>
+            <ul>
+                <li>I play varsity volleyball at Babson</li>
+                <li>I'm always trying new baking recipes</li>
+                <li>Golf is my newest hobby — and I'm hooked</li>
+                <li>I love exploring new places and cultures</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ⭐ STRIPED FOOTER -->
+    <footer class="footer-polkadots">
+        <div class="footer-box">
+        </div>
+    </footer>
+
+</body>
 </html>

@@ -1,120 +1,429 @@
+/* ============================================================
+   ROOT VARIABLES
+============================================================ */
 :root {
-  --bg: #0b1220; /* deep navy */
-  --surface: #0f1724; /* slightly lighter */
-  --text: #e6f0fa; /* off-white */
-  --muted: #9db6d1; /* muted blue */
-  --accent: #5fb3ff; /* primary accent */
-  --accent-2: #7fe1ff; /* hover accent */
-  --highlight-bg: rgba(95,179,255,0.12);
-  --radius: 8px;
+  --brown: #6b4a3b;
+  --blue-light: #c7d9e8;
+  --white: #ffffff;
+  --cream: #f7f3ef;
+
+  --border-thin: 0px solid transparent;
+  --shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Make images scale within their containers */
-img {
-  max-width: 100%;
+/* ============================================================
+   GLOBAL PAGE SETTINGS
+============================================================ */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b08a6a;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   SHARED HEADER (STRIPED)
+============================================================ */
+.striped-header {
+  padding: 40px 20px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue-light) 0px,
+    var(--blue-light) 40px,
+    var(--white) 40px,
+    var(--white) 80px
+  );
+  border-bottom: 4px solid var(--brown);
+}
+
+.striped-header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--brown);
+}
+
+/* ============================================================
+   SHARED NAV BAR
+============================================================ */
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--brown);
+  padding: 16px;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  background-color: #8a5f4d;
+}
+
+.nav-link.active {
+  background-color: var(--blue-light);
+  color: var(--brown);
+}
+
+/* ============================================================
+   SHARED PANEL LAYOUT
+============================================================ */
+.panel-wrapper {
+  max-width: 1100px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.panel {
+  background-color: var(--brown);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  color: var(--blue-light);
+  border-radius: 0px;
+}
+
+.panel h2 {
+  margin-bottom: 10px;
+  color: var(--blue-light);
+}
+
+.panel ul,
+.panel p {
+  color: var(--blue-light);
+}
+
+/* ============================================================
+   SHARED FOOTER (STRIPED)
+============================================================ */
+footer {
+  margin-top: auto;
+}
+
+.footer-polkadots {
+  width: 100%;
+  padding: 60px 30px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue-light) 0px,
+    var(--blue-light) 40px,
+    var(--white) 40px,
+    var(--white) 80px
+  );
+  border-top: 4px solid var(--brown);
+  text-align: center;
+}
+
+.footer-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--brown);
+  font-weight: bold;
+}
+
+/* ============================================================
+   ABOUT ME PAGE
+============================================================ */
+.about-page {
+  background-color: #b08a6a;
+}
+
+.two-column {
+  display: flex;
+  gap: 30px;
+}
+
+.column {
+  flex: 1;
+}
+
+.panel img {
+  width: 100%;
   height: auto;
+  border-radius: 0px;
+}
+
+.contact-page {
+  background-color: #b08a6a;
+}
+
+.contact-panel {
+  padding: 30px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  color: var(--blue-light);
+  font-weight: bold;
+  margin-bottom: 8px;
   display: block;
 }
 
-/* Base layout & typography */
-html, body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cream);
+  border: var(--border-thin);
+  color: var(--brown);
+  box-sizing: border-box;
 }
 
-.container {
+.field textarea {
+  min-height: 160px;
+}
+
+.pink-btn {
+  background-color: var(--blue-light);
+  color: var(--brown);
+  font-weight: bold;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.pink-btn:hover {
+  background-color: #dbe7f2;
+}
+
+.about-page .panel img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  display: block;
+}
+
+/* ============================================================
+   TEMPERATURE CONVERTER PAGE
+============================================================ */
+.converter-page {
+  background-color: #b08a6a;
+}
+
+.converter-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 150px auto;
+  width: 100%;
+}
+
+.converter {
+  background-color: var(--brown);
+  color: var(--blue-light);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  width: 400px;
+  border-radius: 0px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: var(--blue-light);
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cream);
+  border: var(--border-thin);
+  color: var(--brown);
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   HELLO PAGE
+============================================================ */
+.hello-page {
+  background-color: #b08a6a;
+}
+
+.hello-page img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   INDEX PAGE
+============================================================ */
+.index-page {
+  background-color: #b08a6a;
+}
+
+.index-wrapper {
   max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-  border-radius: var(--radius);
+  margin: 60px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-h1, h2, h3 {
-  color: var(--text);
-  margin: 0 0 0.5rem 0;
-  font-weight: 600;
-  letter-spacing: -0.2px;
+.index-panel {
+  background-color: var(--brown);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 0px;
+  color: var(--blue-light);
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--accent-2);
-  margin-bottom: 1rem;
+.index-panel h2 {
+  margin-bottom: 10px;
+  color: var(--blue-light);
+  font-weight: bold;
 }
 
-p {
-  margin: 0 0 1rem 0;
-  color: var(--muted);
+.index-panel p,
+.index-panel ul,
+.index-panel li {
+  color: var(--blue-light);
 }
 
-/* Emphasis / highlight */
-.highlight {
-  display: inline-block;
-  background-color: var(--highlight-bg);
-  color: var(--text);
-  padding: 0.15rem 0.4rem;
-  border-radius: 6px;
-  font-weight: 600;
+.index-panel ul {
+  padding-left: 22px;
 }
 
-/* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 160ms ease, transform 120ms ease;
-  font-weight: 600;
+/* ============================================================
+   FORM PAGE
+============================================================ */
+.form-page {
+  background-color: #b08a6a;
 }
 
-a:hover, a:focus {
-  color: var(--accent-2);
-  transform: translateY(-4px);
-  outline: none;
+.form-page .panel {
+  background-color: var(--brown);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  color: var(--blue-light);
 }
 
-/* Site header (ID selector) */
-#site-header {
-  background-color: rgba(95,179,255,0.06);
-  padding: 1rem 0.75rem;
-  border-radius: calc(var(--radius) - 2px);
-  text-align: center;
-  color: var(--text);
+.form-page input,
+.form-page textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cream);
+  border: var(--border-thin);
+  color: var(--brown);
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-/* Forms */
-input, textarea, select {
-  font: inherit;
-  padding: 0.5rem 0.6rem;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 6px;
-  background: rgba(255,255,255,0.02);
-  color: var(--text);
-  transition: box-shadow 120ms ease, border-color 120ms ease;
+.form-page .pink-btn {
+  background-color: var(--blue-light);
+  color: var(--brown);
+  font-weight: bold;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
-input:focus, textarea:focus, select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 6px 18px rgba(95,179,255,0.08);
-  outline: none;
+.form-page .pink-btn:hover {
+  background-color: #dbe7f2;
 }
 
-/* Utility spacing */
-.spaced { margin-top: 1rem; margin-bottom: 1rem; }
-
-/* Small screens */
-@media (max-width: 600px) {
-  .container { margin: 1.5rem; padding: 1rem; }
-  h1 { font-size: 1.5rem; }
+/* ============================================================
+   DISCOUNT PAGE (FIXED + MATCHES SITE)
+============================================================ */
+.discount-page {
+  background-color: #b08a6a;
 }
 
+.discount-card {
+  max-width: 380px;
+  margin: 60px auto;
+  background-color: var(--brown);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 0px;
+  color: var(--blue-light);
+}
 
+.discount-card h2 {
+  margin-top: 0;
+  color: var(--blue-light);
+}
+
+.discount-card label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--blue-light);
+}
+
+.discount-card input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background-color: var(--cream);
+  border: var(--border-thin);
+  color: var(--brown);
+  box-sizing: border-box;
+}
+
+.discount-card .checkbox-label {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-light);
+}
+
+.discount-card button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background-color: var(--blue-light);
+  color: var(--brown);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.discount-card button:hover {
+  background-color: #dbe7f2;
+}
+
+.discount-results {
+  margin-top: 20px;
+  background-color: var(--cream);
+  padding: 15px;
+  border-radius: 0px;
+  border: var(--border-thin);
+  color: var(--brown);
+}
+
+.discount-results p {
+  margin: 6px 0;
+}

@@ -1,83 +1,88 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <title>About Me | Allison Molendyk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="hello.html">My first HTML page</a></li>
-          <li><a href="about-me.html">About</a></li>
-        </ul>
-      </nav>
+
+  <body class="about-page">
+
+    <!-- STRIPED HEADER -->
+    <header class="striped-header">
       <h1>About Me</h1>
+      <p class="subtitle">Babson College Student</p>
     </header>
 
-    <main>
-      <section>
-        <h2>Info</h2>
+    <!-- SHARED NAV -->
+    <nav class="top-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="hello.html">My First Page</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" href="about-me.html">About Me</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="panel-wrapper">
+
+      <!-- INTRO SECTION -->
+      <section class="panel">
+        <h2>Intro</h2>
+
+        <!-- LOCAL IMAGE -->
+        <img src="images/hong-kong.png" alt="Photo of Hong Kong">
+
+        <!-- EXTERNAL IMAGE -->
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hong_Kong_Skyline_Panorama.jpg"
+          alt="Hong Kong skyline at sunset"
+        >
+
         <p>
-          Hi — I'm Ally. I am a student who loves learning new skills, building
-          small projects, and sharing what I learn.
+          Hi! I'm Ally, a Babson College student who plays varsity volleyball and enjoys
+          staying active on and off the court. I love baking, reading, and playing golf.
+          I’m also excited about learning new skills that help me grow both personally
+          and professionally.
         </p>
 
-        <figure>
-          <img
-            src="images/hong-kong.png"
-            alt="Local Hong Kong photo showing skyline and harbor"
-            style="max-width: 320px; height: auto"
-          />
-          <figcaption>
-            Local photo of Hong Kong, my dream travel destination.
-          </figcaption>
-        </figure>
+        <p>
+          One of my dream travel destinations is Hong Kong — you can explore more about
+          it <a href="https://www.discoverhongkong.com" target="_blank">here</a>.
+        </p>
+      </section>
 
-        <h3>My Interests</h3>
-        <p>I enjoy golf, baking, volleyball, traveling, and reading.</p>
-
+      <!-- PERSONAL INTERESTS -->
+      <section class="panel">
+        <h2>Personal Interests</h2>
         <ul>
-          <li>Golf</li>
-          <li>Baking</li>
           <li>Volleyball</li>
+          <li>Baking and trying new recipes</li>
           <li>Reading</li>
+          <li>Playing golf</li>
+          <li>Traveling and exploring new places</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Travel Inspiration</h2>
-        <p>This external photo shows travel inspiration from the web.</p>
-
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=320&q=80"
-            alt="Beach scenery travel inspiration"
-            style="max-width: 320px; height: auto"
-          />
-          <figcaption>External beach scenery photo from Unsplash.</figcaption>
-        </figure>
-
-        <p>
-          Learn more at
-          <a
-            href="https://www.nationalgeographic.com/travel"
-            target="_blank"
-            rel="noopener"
-            >National Geographic Travel</a
-          >.
-        </p>
+      <!-- COURSE INTERESTS -->
+      <section class="panel">
+        <h2>Course Interests</h2>
+        <ul>
+          <li>Learning the foundations of web development</li>
+          <li>Building small, functional projects that solve real problems</li>
+          <li>Improving debugging and problem‑solving skills</li>
+          <li>Learning how to ask better, more intentional questions when using AI tools</li>
+        </ul>
       </section>
+
     </main>
 
-    <footer>
-      <p>
-        Contact:
-        <a href="mailto:amolendyk1@babson.edu">amolendyk1@babson.edu</a>
-      </p>
+    <!-- FOOTER -->
+    <footer class="footer-polkadots">
+      <div class="footer-box">
+        <p>Contact: <a href="mailto:amolendyk1@babson.edu">amolendyk1@babson.edu</a></p>
+      </div>
     </footer>
+
   </body>
 </html>

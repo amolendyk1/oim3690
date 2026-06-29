@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discount Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="discount-page">
+
+  <!-- HEADER -->
+  <header class="striped-header">
+    <h1>Checkout</h1>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="discount-card">
+      <h2>Discount Calculator</h2>
+
+      <label for="total">Cart Total ($):</label>
+      <input type="number" id="total" placeholder="Enter total">
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="member">
+        I am a member
+      </label>
+
+      <button onclick="applyDiscount()">Calculate Discount</button>
+
+      <div class="discount-results">
+        <p>Discount: <span id="discountPercent">0%</span></p>
+        <p>Final Price: $<span id="finalPrice">0.00</span></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-polkadots">
+    <div class="footer-box">
+      <p>Discount Demo Page</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function getDiscount(total, isMember) {
+      if (total >= 100 && isMember) {
+        return 20;
+      } else if (total >= 100 || isMember) {
+        return 10;
+      } else {
+        return 0;
+      }
+    }
+
+    function applyDiscount() {
+      const total = Number(document.getElementById("total").value);
+      const isMember = document.getElementById("member").checked;
+
+      const discount = getDiscount(total, isMember);
+      const finalPrice = total - (total * (discount / 100));
+
+      document.getElementById("discountPercent").textContent = discount + "%";
+      document.getElementById("finalPrice").textContent = finalPrice.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
+

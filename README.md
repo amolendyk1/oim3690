@@ -11,7 +11,7 @@ This is my course repo for OIM3690. It holds class exercises, weekly logs, and l
 |---------|------|----------|
 | Personal Website | [repo]( https://github.com/amolendyk1/amolendyk1.github.io) | [live](https://amolendyk1.github.io/) |
 | MP1 — Website for Someone Else | [repo](https://github.com/amolendyk1/nely-flower-shop) | [live](https://amolendyk1.github.io/nely-flower-shop/) |
-| MP2 — Interactive Web Tool | | |
+| MP2 — Interactive Web Tool |- [repo](https://github.com/amolendyk1/meal-planner) | [live](amolendyk1.github.io/meal-planner/) |
 | MP3 — API-Powered App | | |
 | Final Project | | |
 

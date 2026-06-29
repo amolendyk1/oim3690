@@ -1,32 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Form Demo</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <style>
-      form {
-        display: grid;
-        gap: 0.5rem;
-      }
-      label {
-        font-weight: 600;
-      }
-      button {
-        padding: 0.5rem 0.75rem;
-        border-radius: 6px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Form Demo</h1>
-      <form action="https://oim.zhili.dev/echo/view" method="POST">
-        <label for="username">Name:</label>
-        <input type="text" id="username" name="username" />
-        <button type="submit">Submit</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="form-page">
+
+  <!-- Striped Header -->
+  <header class="striped-header">
+    <h1>Form Page</h1>
+  </header>
+
+  <!-- NO NAV BAR ON THIS PAGE -->
+
+  <!-- Centered Form Panel -->
+  <main class="panel-wrapper">
+
+    <section class="panel">
+
+      <form>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Write something..."></textarea>
+
+        <button type="submit" class="pink-btn">Submit</button>
+
       </form>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-polkadots">
+    <div class="footer-box">
     </div>
-  </body>
+  </footer>
+
+</body>
 </html>

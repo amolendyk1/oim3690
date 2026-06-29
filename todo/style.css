@@ -1,0 +1,199 @@
+/* ============================================================
+   COLOR + TYPOGRAPHY — MATCHES YOUR SITE
+============================================================ */
+
+:root {
+  --brown: #6b4a3b;
+  --cream: #f7f3ef;
+  --blue-light: #c7d9e8;
+  --white: #ffffff;
+
+  --radius: 0px;        /* sharp edges */
+  --pad: 30px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================================================
+   PAGE BACKGROUND
+============================================================ */
+.todo-page {
+  margin: 0;
+  font-family: "Ariel", sans-serif;
+  color: var(--brown);
+  background-color: #b08a6a;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   STRIPED HEADER
+============================================================ */
+.striped-header {
+  padding: 40px 20px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue-light) 0px,
+    var(--blue-light) 40px,
+    var(--white) 40px,
+    var(--white) 80px
+  );
+  border-bottom: 4px solid var(--brown);
+}
+
+.todo-title {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 900;   /* SUPER BOLD */
+  color: var(--brown);
+  text-align: center;
+}
+
+/* ============================================================
+   MAIN WRAPPER
+============================================================ */
+.todo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  width: 100%;
+}
+
+/* ============================================================
+   TO-DO CONTAINER (BROWN PANEL)
+============================================================ */
+.todo-container {
+  background: var(--brown);
+  padding: var(--pad);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 420px;
+  color: var(--blue-light);
+}
+
+/* ============================================================
+   INPUTS + SELECT
+============================================================ */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+#category-select {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cream);
+  border: var(--radius) solid transparent;
+  color: var(--brown);
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#category-select {
+  width: 120px;
+}
+
+/* ============================================================
+   BUTTONS — BLUE-LIGHT LIKE YOUR SITE
+============================================================ */
+.todo-btn,
+button {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--blue-light);
+  color: var(--brown);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.todo-btn:hover,
+button:hover {
+  background: #dbe7f2;
+}
+
+/* ============================================================
+   FILTER BUTTONS
+============================================================ */
+.filter-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: var(--cream);
+  border: var(--radius) solid transparent;
+  color: var(--brown);
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--blue-light);
+  color: var(--brown);
+}
+
+/* ============================================================
+   TODO LIST ITEMS
+============================================================ */
+#todo-list li {
+  padding: 12px 16px;
+  margin: 8px 0;
+  background: var(--cream);
+  border-radius: var(--radius);
+  border: var(--radius) solid transparent;
+  color: var(--brown);
+}
+
+#todo-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* DELETE BUTTON */
+#todo-list li button {
+  background: var(--blue-light);
+  color: var(--brown);
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#todo-list li button:hover {
+  background: #dbe7f2;
+}
+
+/* ============================================================
+   STRIPED FOOTER
+============================================================ */
+footer {
+  margin-top: auto;
+}
+
+.footer-polkadots {
+  width: 100%;
+  padding: 60px 30px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue-light) 0px,
+    var(--blue-light) 40px,
+    var(--white) 40px,
+    var(--white) 80px
+  );
+  border-top: 4px solid var(--brown);
+  text-align: center;
+}
+
+.footer-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--brown);
+  font-weight: bold;
+}
